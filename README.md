@@ -2,10 +2,8 @@
 
 ## This module contains utility functions for working with FastF1 Python library.
 
-### compare_laps(): It automates session loading, lap time analysis, circuit plotting, and telemetry comparison between the fastest laps of two drivers during a session.
-- Retrieves and compares the fastest laps of two drivers.
+### compare_race_laps(): It automates session loading, telemetry comparison, and plots track dominance between two drivers for a given lap of the race.
 - Visualizes
-  - Circuit layout
   - Side-by-side telemetry plots:
     - Brake Input
     - Speed (km/h)
@@ -13,13 +11,19 @@
     - RPM
     - Gear Number
     - Throttle Input
+  - Track dominance plot
+ 
+### compare_fastest_laps(): It automates session loading, telemetry comparison, and plots track dominance between two drivers for their fastest  laps in a given session.
 
 Example:
 
 ```
-from f1_utils import compare_laps
+from f1_utils import compare_race_laps
 
-compare_laps(year=2021, gp='abu dhabi', session_type='Q', driver_1 = "VER", driver_2 = "HAM")
+compare_race_laps(year=2021, gp='abu dhabi', driver_1 = "VER", driver_2 = "HAM")
+
+from f1_utils import compare_fastest_laps
+compare_fastest_laps(year=2021, gp='abu dhabi',session_type: str = 'Q', driver_1 = "VER", driver_2 = "HAM")
 ```
 
 # pia_nor_quali_comparison.ipynb - Piastri vs Norris 2025 Qualifying Lap Comparison
