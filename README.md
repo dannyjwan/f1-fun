@@ -25,6 +25,9 @@ compare_race_laps(year=2021, gp='abu dhabi', driver_1 = "VER", driver_2 = "HAM")
 from f1_utils import compare_fastest_laps
 compare_fastest_laps(year=2021, gp='abu dhabi',session_type: str = 'Q', driver_1 = "VER", driver_2 = "HAM")
 ```
+![telemetry](https://github.com/user-attachments/assets/8f4e12de-2478-4b6c-9080-dc1e2c4b4344)
+
+![td](https://github.com/user-attachments/assets/8e963aeb-7749-409b-9dbf-35b035d5567e)
 
 # pia_nor_quali_comparison.ipynb - Piastri vs Norris 2025 Qualifying Lap Comparison
 
