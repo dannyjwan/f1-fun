@@ -1,0 +1,6 @@
+fastf1
+matplotlib.pyplot
+matplotlib.patches
+matplotlib.collections
+numpy
+pandas

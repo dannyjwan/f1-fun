@@ -2,14 +2,20 @@ import importlib
 import subprocess
 import sys
 import os
+import fastf1
+import matplotlib.pyplot as plt
+from matplotlib.patches import Patch
+from matplotlib.collections import LineCollection
+import numpy as np
+import pandas as pd
 
-def install_and_import(package: str):
-    """Install and import a Python package if not already installed."""
-    try:
-        return importlib.import_module(package)
-    except ImportError:
-        subprocess.check_call([sys.executable, '-m', 'pip', 'install', package])
-        return importlib.import_module(package)
+# def install_and_import(package: str):
+#     """Install and import a Python package if not already installed."""
+#     try:
+#         return importlib.import_module(package)
+#     except ImportError:
+#         subprocess.check_call([sys.executable, '-m', 'pip', 'install', package])
+#         return importlib.import_module(package)
 
 
 def compare_race_laps(year: int = 2021, gp: str = 'abu dhabi', driver_1: str = 'VER', driver_2: str = 'HAM', lap_num: int = -1) -> None:
@@ -20,12 +26,12 @@ def compare_race_laps(year: int = 2021, gp: str = 'abu dhabi', driver_1: str = '
         driver_1 (str): Three-letter identifier for driver_1 (e.g., 'VER') 
         driver_2 (str): Three-letter identifier for driver_2 (e.g., 'HAM')
     """
-    fastf1 = install_and_import('fastf1')
-    plt = install_and_import('matplotlib.pyplot')
-    Patch = install_and_import('matplotlib.patches').Patch
-    LineCollection = install_and_import('matplotlib.collections').LineCollection
-    np = install_and_import('numpy')
-    pd = install_and_import('pandas')
+    # fastf1 = install_and_import('fastf1')
+    # plt = install_and_import('matplotlib.pyplot')
+    # Patch = install_and_import('matplotlib.patches').Patch
+    # LineCollection = install_and_import('matplotlib.collections').LineCollection
+    # np = install_and_import('numpy')
+    # pd = install_and_import('pandas')
     
     # Create session 
     session = fastf1.get_session(year, gp, 'R')
@@ -306,12 +312,12 @@ def compare_fastest_laps(year: int = 2021, gp: str = 'abu dhabi', session_type: 
         driver_1 (str): Three-letter identifier for driver_1 (e.g., 'VER') 
         driver_2 (str): Three-letter identifier for driver_2 (e.g., 'HAM')
     """
-    fastf1 = install_and_import('fastf1')
-    plt = install_and_import('matplotlib.pyplot')
-    Patch = install_and_import('matplotlib.patches').Patch
-    LineCollection = install_and_import('matplotlib.collections').LineCollection
-    np = install_and_import('numpy')
-    pd = install_and_import('pandas')
+    # fastf1 = install_and_import('fastf1')
+    # plt = install_and_import('matplotlib.pyplot')
+    # Patch = install_and_import('matplotlib.patches').Patch
+    # LineCollection = install_and_import('matplotlib.collections').LineCollection
+    # np = install_and_import('numpy')
+    # pd = install_and_import('pandas')
 
     # Create session 
     session = fastf1.get_session(year, gp, session_type)
